@@ -1,4 +1,4 @@
-import { Component, computed, EventEmitter, Input, input, Output } from '@angular/core';//input est une fction
+import { Component, computed, EventEmitter, Input, input, output, Output } from '@angular/core';//input est une fction
 
 
 @Component({
@@ -17,7 +17,8 @@ export class UserComponent {
 
   avatar = input.required<string>();//  readonly
   name = input.required<string>();
-  @Output() select = new EventEmitter();
+ // @Output() select = new EventEmitter();
+  select = output<string>();
 
 
  /* get imagePath(){
