@@ -11,9 +11,12 @@ import { Component, Input } from '@angular/core';
 export class UserComponent {
 
 // cette propriete  est settable from outside
-  @Input() avatar!: string; //!= on dit a typescript que l on est sur que la valeur sera un string mm si ca n a pas l air logique
-  @Input() name!: string;
-  
+  @Input({required: true}) avatar!: string; //!= on dit a typescript que l on est sur que la valeur sera un string mm si ca n a pas l air logique
+  @Input({required: true}) name!: string;
+
+  get imagePath(){
+    return 'assets/users/' + this.avatar
+  }
   onSelectUser(){
     
   }
